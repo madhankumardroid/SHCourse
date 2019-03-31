@@ -52,17 +52,14 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: fonts/Raleway-Regular.ttf
+        - asset: fonts/Raleway-Bold.ttf
+          weight: 700 #For bold fonts, we need to specify the weight. The weight varies from 100 to 900. To know the weight of a font, navigate to fonts.google.com. In the customize section, we can see raleway bold has the weight of 700.
+        - asset: fonts/Raleway-LightItalic.ttf #For this, we need to apply the style to italic.
+          weight: 300
+          style: italic
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages

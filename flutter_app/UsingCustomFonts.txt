@@ -1,0 +1,25 @@
+In order to use custom fonts in our Flutter application, we need to do the below things:
+1. Download and import the font file.
+2. Declare it in pubspec.yaml file.
+3. Finally, use it in our text widget or anywhere in the application.
+
+1. Download the font:
+- To download open source fonts, go to fonts.google.com
+- Search for the font you want, select and download it.
+- The zip file contains all of the fonts in that font family.
+- Select all or what you want and copy them.
+- Create a directory named 'fonts' in the root directory and paste the fonts there.
+
+2. Declare it in pubspec.yaml:
+- It is the file containing the dependencies and metadata. Similar to build.gradle file in Android
+- .yaml - Ain't MarkUp Language. It is used to store configurations, dependencies and metadata in many frameworks.
+- pubspec.yaml - Containing most of the configurations of our application. The name, description, flutter SDK
+- Go to the font sections and declare your fonts.
+- While defining the fonts, use a proper indentation of 2 spaces.
+
+3. Use it in widget:
+- Define the font family.
+- The name given in the font family should actually match the name defined in pubspec.yaml.
+- You can specify fontWeight with FontWeight.{value} which actuall call the font with the weight in the pubspec.yaml file.
+
+Whenever you made changes in the pubspec.yaml file, rung get dependencies.

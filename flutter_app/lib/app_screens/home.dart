@@ -20,6 +20,15 @@ class Home extends StatelessWidget {
 //            width: 200.0,
 //            height: 100.0,
             margin: EdgeInsets.all(20.0),
-            child: Text("The container", textDirection: TextDirection.ltr)));
+            child: Text("Success",
+                textDirection: TextDirection.ltr,
+                style: TextStyle(
+                    decoration: TextDecoration
+                        .none /*By default, it is TextDecoration.underline*/,
+                    fontSize: 75.0,
+                    fontFamily: "Raleway",
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white
+                ))));
   }
 }
