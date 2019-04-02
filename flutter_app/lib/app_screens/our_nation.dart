@@ -89,7 +89,8 @@ class Nation extends StatelessWidget {
 class MyImageAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AssetImage assetImage = AssetImage("images/up_arrow.png");
+    AssetImage assetImage = AssetImage(
+        "images/up_arrow.png"); //Ref link: https://flutter.dev/docs/development/ui/assets-and-images
     Image image = Image(image: assetImage, height: 100.0, width: 100.0);
     return Container(child: image);
   }
