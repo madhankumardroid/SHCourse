@@ -77,10 +77,20 @@ class Nation extends StatelessWidget {
                   ),
                 )
               ],
-            )
+            ),
+            MyImageAsset()
           ],
         ),
       ),
     );
+  }
+}
+
+class MyImageAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = AssetImage("images/up_arrow.png");
+    Image image = Image(image: assetImage, height: 100.0, width: 100.0);
+    return Container(child: image);
   }
 }
