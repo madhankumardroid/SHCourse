@@ -78,7 +78,8 @@ class Nation extends StatelessWidget {
                 )
               ],
             ),
-            MyImageAsset()
+            MyImageAsset(),
+            MyRaisedButton()
           ],
         ),
       ),
@@ -93,5 +94,39 @@ class MyImageAsset extends StatelessWidget {
         "images/up_arrow.png"); //Ref link: https://flutter.dev/docs/development/ui/assets-and-images
     Image image = Image(image: assetImage, height: 100.0, width: 100.0);
     return Container(child: image);
+  }
+}
+
+class MyRaisedButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    //The build context is being received in the StatelessWidget. It simply implies the context in which a particular widget is being built.
+    return new Container(
+        margin: EdgeInsets.only(top: 30.0),
+        width: 250.0,
+        height: 50.0,
+        child: RaisedButton(
+          //This is a button with an elevation
+            color: Colors.amberAccent,
+            child: Text("My Nation",
+                style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                    fontFamily: 'Raleway',
+                    fontWeight: FontWeight.w700)),
+            elevation: 5.0,
+            //If onPressed is null, the color of the button is not applied.
+            onPressed: () => showDetail(context)));
+  }
+
+  void showDetail(BuildContext context) {
+    var alertDialog = AlertDialog(
+      title: Text("Info"),
+      content: Text("This is your nation"),
+    );
+    showDialog(
+        context: context,
+        //Here the builder is function handler.  So we need a create a function that accepts build context and returns a widget.
+        builder: (BuildContext context) => alertDialog);
   }
 }
