@@ -1,0 +1,10 @@
+LongList:
+In order to create a long list, we need to do the below things:
+1. Prepare the data source:
+    This is needed to inflate in each of the list item in the list view.
+
+2. Convert the data source into widgets:
+    Because in the end  the listview expects an array of widgets.
+
+3. Use widgets as a children of a ListView:
+    Finally, we have to use all the widgets as a children of the listview.
